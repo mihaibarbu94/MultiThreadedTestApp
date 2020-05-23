@@ -1,7 +1,8 @@
 # MultiThreadedTestApp
 Dummy app to test the use of multi threading in java. 
 
-It calcualtes all the primes that have its figures in desc order. You can specify on hoy many cores you want it to run. A few tests below.
+It calcualtes all the primes that have its figures in desc order. You can specify on how many cores it should use. A few tests are listed below.
+
 
 ### Intel i7 4710-HQ 3.5Ghz all cores (Quad Core 8 Threads)
 * 8 Threads: Calculated in: 18.713 seconds
