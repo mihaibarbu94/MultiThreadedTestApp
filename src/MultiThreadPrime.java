@@ -10,7 +10,7 @@ public class MultiThreadPrime implements Runnable {
 
     public static void fileWriter(long primeToWrite) {
         try {
-            FileWriter myWriter = new FileWriter("out/perfect_primes", true);
+            FileWriter myWriter = new FileWriter("perfect_primes", true);
             myWriter.write("The perfect prime: " + primeToWrite + "\n");
             myWriter.close();
         } catch (IOException e) {
@@ -25,7 +25,6 @@ public class MultiThreadPrime implements Runnable {
         long startRange = range.first;
         long endRange = range.second;
 
-//        if (endRange >= 9876543210.0) {
         if (endRange >= 9876543210.0) {
             return;
         }
