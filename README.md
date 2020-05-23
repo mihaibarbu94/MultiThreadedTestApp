@@ -4,10 +4,11 @@ Dummy app to test the use of multi threading in java.
 It calcualtes all the primes that have its figures in desc order. You can specify on hoy many cores you want it to run. A few tests below.
 
 ### Intel i7 4710-HQ 3.5Ghz all cores (Quad Core 8 Threads)
-* 8 Threads:
+* 8 Threads: Calculated in: 18.713 seconds
 * 4 Threads: Calculated in: 22.714 seconds
-* 2 Threads:
-* 1 Thread : 
+* 3 Threads: Calculated in: 27.762 seconds
+* 2 Threads: Calculated in: 37.737 seconds
+* 1 Thread : Calculated in: 72.891 seconds
 
 ### Raspberry Pi 3B 1.2 Ghz all cores (Quad Core)
 * 4 Threads: Calculated in: 3088.169 seconds (~51 MINUTES)
