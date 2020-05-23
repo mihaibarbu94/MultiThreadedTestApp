@@ -1,4 +1,4 @@
-public class WorkDistributor implements Runnable{
+public class WorkDistributor implements Runnable {
     private final long START = 2;
     private SyncRange syncRange;
     private int threads;
@@ -15,8 +15,7 @@ public class WorkDistributor implements Runnable{
 
     @Override
     public void run() {
-        for (int i = 0; i < threads; i++)
-        {
+        for (int i = 0; i < threads; i++) {
             Thread object = new Thread(new MultiThreadPrime(syncRange));
             object.start();
         }

@@ -1,4 +1,3 @@
-
 public class SyncRange {
     private long start;
     private long end;
@@ -8,13 +7,13 @@ public class SyncRange {
         this(10000000);
     }
 
-    public SyncRange(int increment ) {
+    public SyncRange(int increment) {
         start = 0;
         end = increment;
         this.increment = increment;
     }
 
-    private synchronized void incrementRange(){
+    private synchronized void incrementRange() {
         start += increment;
         end += increment;
     }
@@ -23,7 +22,7 @@ public class SyncRange {
         return new Pair<>(start, end);
     }
 
-    public synchronized Pair<Long, Long>  getAndIncrementRange() {
+    public synchronized Pair<Long, Long> getAndIncrementRange() {
         final Pair<Long, Long> range = getRange();
         incrementRange();
         System.out.println("Range is between: " + range.first + " and " + range.second);

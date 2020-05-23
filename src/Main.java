@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String args[]) throws IOException {
-        Scanner scan= new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("Enter how many threads you want to use: ");
 
         //capture the input in an integer
@@ -25,13 +25,13 @@ public class Main {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.out.println("Shutdown Hook is running !");
             final long endTime = System.currentTimeMillis();
-            System.out.println("Calculated in: " + (endTime - startTime) / 1000.0 + " seconds" );
+            System.out.println("Calculated in: " + (endTime - startTime) / 1000.0 + " seconds");
         }));
     }
 
-    private static void findCrescendoPrimeSingleThread(){
+    private static void findCrescendoPrimeSingleThread() {
 
-        long i= 10;
+        long i = 10;
         while (true) {
             i++;
 
@@ -41,7 +41,7 @@ public class Main {
 
             if (!Prime.isDescrescendo(i)) {
                 continue;
-            } else if (!Prime.isPrime(i)){
+            } else if (!Prime.isPrime(i)) {
                 continue;
             } else {
 //                System.out.println("The perfect prime: " + i);
@@ -50,10 +50,10 @@ public class Main {
         }
     }
 
-    private static long findDescrescendoMultiThread(final int threads){
+    private static long findDescrescendoMultiThread(final int threads) {
         ExecutorService threadPool = Executors.newFixedThreadPool(threads);
 
-        long i= 10;
+        long i = 10;
         while (true) {
             threadPool.submit(new MyThread(i));
             i = i + 100000;
